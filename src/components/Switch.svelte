@@ -1,13 +1,13 @@
 <script lang="ts">
-  import {dark, theme} from '../utils/store';
-  import { colors } from '../utils/constant';
+  import { dark } from '../utils/theme';
 </script>
+
 <span>
-  <input type="checkbox" id="switch" bind:checked={$dark} >
-  <label for="switch" class="border-black {colors.get($theme).darkBorder}">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-    <div class="toggle rounded-full bg-black {colors.get($theme).darkBackground}"></div>
+  <input type="checkbox" id="switch" bind:checked={$dark} />
+  <label for="switch" class="border-gray-800 dark:border-fill">
+    <i class="fas fa-moon" />
+    <i class="fas fa-sun" />
+    <div class="toggle rounded-full bg-black dark:bg-fill" />
   </label>
 </span>
 

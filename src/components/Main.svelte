@@ -1,8 +1,6 @@
 <script lang="ts">
   import ThemeOption from './ThemeOption.svelte';
   import TimeSelector from './TimeSelector.svelte';
-  import { colors } from '../utils/constant';
-  import { theme } from '../utils/store';
 </script>
 
 <div class="flex-grow flex flex-col items-center">
@@ -11,11 +9,9 @@
     <TimeSelector title="Work session" />
     <TimeSelector title="Break session" />
   </div>
-  <button class="{colors.get($theme).darkBorder}"><i class="fas fa-play mr-2"/>START</button>
+  <button class="mt-4 rounded-md border-2 p-2 border-gray-800 dark:border-fill hover:bg-gray-800
+  hover:text-fill dark:hover:text-gray-800 dark:hover:bg-fill">
+    <i class="fas fa-play mr-2" />
+    START
+  </button>
 </div>
-
-<style lang="postcss">
-  button {
-    @apply mt-4 rounded-md border-2 border-black p-2;
-  }
-</style>

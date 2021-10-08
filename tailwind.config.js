@@ -8,7 +8,17 @@ module.exports = {
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      textColor: {
+        fill: 'var(--main-color)',
+      },
+      borderColor: {
+        fill: 'var(--main-color)',
+      },
+      backgroundColor: {
+        fill: 'var(--main-color)',
+      }
+    },
   },
   variants: {
     extend: {},
@@ -18,14 +28,4 @@ module.exports = {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
-
-  theme: {
-    extend: {
-      colors: {
-        amber: colors.amber,
-        lime: colors.lime,
-        orange: colors.orange
-      }
-    }
-  }
 }

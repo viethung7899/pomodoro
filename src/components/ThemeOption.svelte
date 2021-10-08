@@ -1,17 +1,16 @@
 <script lang="ts">
-  import { colors } from '../utils/constant';
-  import { theme } from '../utils/store';
+  import { theme, themes } from '../utils/theme';
 </script>
 
 <div>
   <p class="py-2">Choose your theme...</p>
   <select
-    class="border-black {colors.get($theme).darkBorder} bg-transparent
+    class="border-black dark:border-fill bg-transparent
       border-2 rounded-md p-1 focus:outline-none text-center"
     bind:value={$theme}
   >
-    {#each [...colors] as [key, color]}
-      <option value={key}>{color.icon} {key}</option>
+    {#each [...themes] as [key, theme]}
+      <option value={key}>{theme.display}</option>
     {/each}
   </select>
 </div>

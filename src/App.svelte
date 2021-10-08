@@ -1,13 +1,13 @@
 <script lang="ts">
   import Pomodoro from './Pomodoro.svelte';
-  import { dark } from './utils/store';
+  import { dark, theme, themes } from './utils/theme';
 
   let darkMode: string;
 
   $: darkMode = $dark ? 'dark' : '';
 </script>
 
-<div class={darkMode}>
+<div class="{darkMode} {themes.get($theme).class}">
   <Pomodoro />
 </div>
 
@@ -20,5 +20,36 @@
     transition-property: background-color, border-color;
     transition-duration: 0.2s;
     transition-timing-function: linear;
+  }
+
+  /* Theme */
+  @layer base {
+    :root {
+      --main-color: #EF9A9A;
+    }
+
+    .theme-pomodoro {
+      --main-color: #EF9A9A;
+    }
+
+    .theme-arancia {
+      --main-color: #FFCC80;
+    }
+
+    .theme-limone {
+      --main-color: #FFF59D;
+    }
+
+    .theme-kiwi {
+      --main-color: #A5D6A7;
+    }
+
+    .theme-mirtillo {
+      --main-color: #9FA8DA;
+    }
+
+    .theme-cocco {
+      --main-color: #EEEEEE;
+    }
   }
 </style>
