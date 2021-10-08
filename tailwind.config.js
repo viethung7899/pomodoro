@@ -1,10 +1,12 @@
+const colors = require('tailwindcss/colors');
 const production = !process.env.ROLLUP_WATCH;
+
 module.exports = {
   purge: {
-    enabled: production,
-    content: ["./src/**/*.svelte"],
+    enabled: true,
+    content: ["./src/**/*.svelte", "./src/**/*.ts"],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
   },
@@ -16,4 +18,14 @@ module.exports = {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
+
+  theme: {
+    extend: {
+      colors: {
+        amber: colors.amber,
+        lime: colors.lime,
+        orange: colors.orange
+      }
+    }
+  }
 }
