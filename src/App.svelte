@@ -2,8 +2,6 @@
   import Pomodoro from './Pomodoro.svelte';
   import { dark, theme, themes } from './utils/theme';
 
-  let darkMode: string;
-
   $: darkMode = $dark ? 'dark' : '';
 </script>
 

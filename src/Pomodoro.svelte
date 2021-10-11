@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Nav from './components/Nav.svelte';
+  import Main from './components/Main.svelte';
+import Nav from './components/Nav.svelte';
   import Selection from './components/Selection.svelte';
   import Timer from './components/Timer.svelte';
 </script>
@@ -11,7 +12,7 @@
     bg-fill dark:bg-gray-800"
 >
   <Nav />
-  <Timer />
+  <Main />
 
   <!-- Footer -->
   <div class="text-center py-2">Developed by Viet Hung Nguyen</div>
