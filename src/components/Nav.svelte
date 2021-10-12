@@ -9,7 +9,7 @@
     <a
       id="github"
       class="regular-button"
-      href="https://github.com/viethung7899/science-lab-source/tree/main/mandelbrot-julia"
+      href="https://github.com/viethung7899/pomodoro"
       target="_blank"><i class="fab fa-github text-2xl" /></a
     >
   </div>
