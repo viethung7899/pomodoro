@@ -18,7 +18,6 @@
       } else {
         remaining = $breakSession * 60;
       }
-      console.log(remaining);
     } else {
       remaining--;
     }

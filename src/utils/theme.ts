@@ -36,6 +36,6 @@ themes.set('cocco', {
   class: 'theme-cocco',
 });
 
-export const dark = writable(false);
+export const dark = writable(window.matchMedia('(prefers-color-scheme: dark)').matches);
 export const theme = writable('pomodoro');
 export { themes };
